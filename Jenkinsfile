@@ -11,21 +11,5 @@ pwd
  '''
       }
     }
-    stage('VersioningArtifactory') {
-      steps {
-        sh '''#!/bin/bash
-# Credentials
-USER="user"
-PASS="ramonesparza"
-# repo and path
-REPO="test"
-FILENAME=""
-
-curl -u ${USER}:${PASS} -X PUT ec2-13-59-196-122.us-east-2.compute.amazonaws.com/${REPO}/${FILENAME} -T ${FILENAME}
-
-
-'''
-      }
-    }
   }
 }
