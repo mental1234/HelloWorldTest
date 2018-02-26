@@ -28,7 +28,7 @@ URL="ec2-13-59-196-122.us-east-2.compute.amazonaws.com"
 REPO="test"
 folder="HW_Proj"
 
-curl -u ${USER}:${PASS} -X PUT ${URL}/${REPO}/${FOLDER}/${FILE} -T ${FILE}
+curl -u ${USER}:${PASS} -X PUT ${URL}/${REPO}/${FOLDER}${FILE} -T ${FILE}
 '''
       }
     }
