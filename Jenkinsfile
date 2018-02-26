@@ -46,7 +46,7 @@ FILE=$(ls | grep *.war)
 cd ${WORKSPACE}
 mkdir -p Deploy
 cd Deploy
-curl -u ${USER}:${PASS} ${URL}/test/HW_Proj/${FILE}
+curl -u ${USER}:${PASS} ${URL}/test/HW_Proj/${FILE} > HW.war
 
 
 
