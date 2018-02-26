@@ -32,5 +32,26 @@ curl -u ${USER}:${PASS} -X PUT ${URL}/${REPO}/${FOLDER}/${FILE} -T ${FILE}
 '''
       }
     }
+    stage('DeployArtifact') {
+      steps {
+        sh '''#! /bin/bash
+
+URL="http://ec2-13-59-196-122.us-east-2.compute.amazonaws.com/artifactory"
+USER="user"
+PASS="ramonesparza"
+
+cd target
+FILE=$(ls | grep *.war)
+
+cd ${WORKSPACE}
+mkdir -p Deploy
+cd Deploy
+curl -u ${USER}:${PASS} ${URL}/test/HW_Proj/${FILE}
+
+
+
+'''
+      }
+    }
   }
 }
